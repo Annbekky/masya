@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мася — пушистая богиня</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom right, #fbeaff, #e0f7fa);
+      color: #4e3c57;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #ffe6fa;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .photo {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem;
+    }
+    .photo img {
+      max-width: 300px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .photo img:hover {
+      transform: scale(1.05) rotate(1deg);
+    }
+    .about {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff6fc;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(200, 150, 200, 0.2);
+    }
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .donate {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .donate button {
+      background: #ff99cc;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 2rem;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255, 153, 204, 0.4);
+    }
+    .donate button:hover {
+      background: #ff66b2;
+    }
+    footer {
+      background-color: #fcd6ff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #6b4e6b;
+    }
+    @keyframes wiggle {
+      0% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+      100% { transform: rotate(-3deg); }
+    }
+    .wiggle-on-hover:hover {
+      animation: wiggle 0.4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <audio id="meow-sound" src="https://www.fesliyanstudios.com/play-mp3/696" preload="auto"></audio>
+
+  <header>
+    <h1>Привет, я Мася!</h1>
+    <p>Альбинос, глухая и пушистая — как снежинка в пушистом капюшоне!</p>
+  </header>
+
+  <section class="photo">
+    <img src="https://i.pinimg.com/736x/e5/b0/2f/e5b02f366c1f7177afbb9f22066090f3.jpg" alt="Мася в позе богини" class="wiggle-on-hover" onclick="document.getElementById('meow-sound').play()">
+    <img src="https://i.pinimg.com/736x/53/da/b3/53dab3d00a45edb4454d8ea77cc9e141.jpg" alt="Мася гламурная" class="wiggle-on-hover" onclick="document.getElementById('meow-sound').play()">
+  </section>
+
+  <section class="about">
+    <p>
+      Я — турецкая ангора с ослепительно белой шерстью и с характером принцессы.<br>
+      Да, я не слышу, но зато вижу всё — особенно, если ты открыл холодильник.<br>
+      Обожаю гулять и лизать носы собак (да, серьёзно).<br><br>
+      Мой кожаный слуга (иначе не назвать) прячет корм! 😾
+      Поэтому я собираю <strong>денежки на еду</strong> — вдруг однажды я сама смогу себе заказать суши.
+    </p>
+  </section>
+
+  <section class="donate">
+ <a href="https://www.tbank.ru/rm/r_inETgqENdF.apNsrYRxor/hBfAE30568/" target="_blank">
+    <button onclick="document.getElementById('meow-sound').play(); alert('Мяу! Спасибо за донат 😻')">💸 Поддержать Масю</button>
+  </section>
+
+  <footer>
+    Сайт сделан кошкой. Все права на корм защищены.
+  </footer>
+</body>
+</html>
